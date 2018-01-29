@@ -1,0 +1,41 @@
+{
+    "name": "vistag/human-readable",
+    "description": "Convert numbers and seconds to the human readable format",
+    "type": "library",
+    "keywords": ["numbers", "seconds", "readable", "human-readable"],
+    "homepage": "https://github.com/VistagGit/human-readable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Rorecek",
+            "email": "pavel@rorecek.com",
+            "homepage": "https://laravelist.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/VistagGit/human-readable/issues",
+        "source": "https://github.com/VistagGit/human-readable"
+    },
+    "require": {
+        "php": "^5.4 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7|^5.0",
+        "jakub-onderka/php-parallel-lint": "^0.9.0"
+    },
+    "autoload": {
+        "psr-4": {"Vistag\\HumanReadable\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Vistag\\HumanReadable\\Test\\": "tests/"}
+    },
+    "scripts": {
+        "lint": "parallel-lint src tests",
+        "phpunit": "phpunit --verbose --colors=always",
+        "test": [
+            "@lint",
+            "@phpunit"
+        ]
+    },
+    "minimum-stability": "dev"
+}
